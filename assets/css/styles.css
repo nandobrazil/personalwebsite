@@ -81,6 +81,26 @@ body.dark-theme{
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
+/*========== Button Theme Palette ==========*/
+
+.palette__button {
+    width: 13px;
+    height: 13px;
+    border-radius: .25rem;
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+.palette__button-purple{
+    background-color: hsl(250, 69%, 61%);
+}
+
+.palette__button-green{
+    background-color: hsl(142, 69%, 61%);
+}
+
+.palette__button-blue {
+    background-color: hsl(5, 69%, 61%);
+}
 
 /*========== Button Dark/Light ==========*/
 .nav__btns{

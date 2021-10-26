@@ -66,6 +66,43 @@ tabs.forEach(tab =>{
     })
 })
 
+/*==================== PALETTE COLOR ====================*/
+const paletteBtns = document.querySelectorAll('.palette__button')
+
+const palettePurple = document.getElementById('palette-purple')
+const paletteGreen = document.getElementById('palette-green')
+const paletteRed = document.getElementById('palette-red')
+
+const selectedPalette = localStorage.getItem('selected-palette')
+let color
+
+if(selectedPalette){
+    document.documentElement.style.setProperty('--hue-color', selectedPalette)
+}
+
+palettePurple.addEventListener('click', () =>{
+    localStorage.setItem('selected-palette', 250)
+    setColor(250)
+})
+paletteGreen.addEventListener('click', () =>{
+    localStorage.setItem('selected-palette', 142)
+    setColor(142)
+})
+paletteRed.addEventListener('click', () =>{
+    localStorage.setItem('selected-palette', 5)
+    setColor(5)
+})
+
+let setColor = function(paletteColor){
+    document.documentElement.style.setProperty('--hue-color', paletteColor)
+}
+
+paletteBtns.forEach(e => {
+        e.addEventListener('click', () => {
+            console.log(localStorage.getItem('selected-palette'))
+        })
+    })
+
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
